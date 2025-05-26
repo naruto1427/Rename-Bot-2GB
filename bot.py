@@ -50,7 +50,7 @@ for id in Config.ADMIN:
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
-                 await self.send_message( Config.LOG_CHANNEL,
+                 await self.send_message(Config.LOG_CHANNEL,
     f"**Mmm~ {me.mention} just got turned on all over again... Ready for round two, darling?**\n\n"
     f"📅 Date : `{date}`\n"
     f"⏰ Time : `{time}`\n"
