@@ -27,10 +27,9 @@ async def rename_start(client, message):
 
     try:
         await message.reply_text(
-    text=f"**Hey~ Give me a new name for your file, darling...**\n\n**Old File Name** :- {old_filename}"
-) `{filename}`",
-            reply_to_message_id=message.id,  
-            reply_markup=ForceReply(True)
+    text=f"**Hey~ Give me a new name for your file, darling...**\n\n**Old File Name** :- `{old_filename}`",
+    reply_to_message_id=message.id,
+    reply_markup=ForceReply(True)
         )       
         await sleep(30)
     except FloodWait as e:
