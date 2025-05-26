@@ -70,7 +70,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
             ms = await query.message.reply_text("**⏳ Hold on, sweetheart... I’m getting things ready for you~**", reply_to_message_id=metadata.id)
             await jishubotz.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
             try:
-    await ms.edit("**Yay~ Your Metadata Code is set! You’re amazing! ✅**")
+                await ms.edit("**Yay~ Your Metadata Code is set! You’re amazing! ✅**")
 except Exception as e:
     print(f"Oopsie daisy! Something went sideways while setting metadata: {e}")
 
