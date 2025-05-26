@@ -58,6 +58,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
     elif data == 'cutom_metadata':
     await query.message.delete()
     try:
+        # The rest of the indented block
         # Ask the cutie for their secret metadata
         metadata = await bot.ask(
             text="**Hey sweetie, send me your secret metadata code now~**",
