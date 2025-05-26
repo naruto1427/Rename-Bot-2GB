@@ -102,7 +102,7 @@ async def doc(bot, update):
             message=file, 
             file_name=file_path, 
             progress=progress_for_pyrogram, 
-            progress_args=(" = ("🚀 Ahn~ Downloading in progress... Don’t blink! ⚡", ms, time.time())
+            progress_args=("🚀 Ahn~ Downloading in progress... Don’t blink! ⚡", ms, time.time())
         )                    
     except Exception as e:
         return await ms.edit(e)
