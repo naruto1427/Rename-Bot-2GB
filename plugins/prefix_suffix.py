@@ -16,7 +16,7 @@ async def add_caption(client, message):
 @Client.on_message(filters.private & filters.command('del_prefix'))
 async def delete_prefix(client, message):
 
-    JishuDeveloper = await message.reply_text("⏳ Hold on, sweetheart... I’m getting things ready for you~)
+    JishuDeveloper = await message.reply_text("⏳ Hold on, sweetheart... I’m getting things ready for you~")
     prefix = await jishubotz.get_prefix(message.from_user.id)
     if not prefix:
         return await JishuDeveloper.edit("**Oopsie~ Looks like you haven’t set a prefix yet, darling! ❌**")
