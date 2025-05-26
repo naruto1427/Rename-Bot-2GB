@@ -139,7 +139,7 @@ async def doc(bot, update):
         except Exception as e:
             return await ms.edit(text=f"Your Caption Error: ({e})")             
     else:
-        caption = f"**{new_filename}**\n\n**User:** {user_name}\n**User ID:** {user_id}"
+        caption = f"**{new_filename}**"
 
     if (media.thumbs or c_thumb):
         if c_thumb:
