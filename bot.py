@@ -50,14 +50,14 @@ for id in Config.ADMIN:
                 curr = datetime.now(timezone("Asia/Kolkata"))
                 date = curr.strftime('%d %B, %Y')
                 time = curr.strftime('%I:%M:%S %p')
-                 await self.send_message(Config.LOG_CHANNEL,
-    f"**Mmm~ {me.mention} just got turned on all over again... Ready for round two, darling?**\n\n"
-    f"📅 Date : `{date}`\n"
-    f"⏰ Time : `{time}`\n"
-    f"🌐 Timezone : `Asia/Kolkata`\n\n"
-    f"🉐 Version : `v{__version__} (Layer {layer})`\n"
-    f"*Nnh~ Feels so good to be back... Did you miss me?*"
-)
+                 async def some_func(self):
+    await self.send_message(Config.LOG_CHANNEL,
+                            f"**Mmm~ {me.mention} just got turned on all over again... Ready for round two, darling?**\n\n"
+                            f"📅 Date : `{date}`\n"
+                            f"⏰ Time : `{time}`\n"
+                            f"🌐 Timezone : `Asia/Kolkata`\n\n"
+                            f"🉐 Version : `v{__version__} (Layer {layer})`\n"
+                            f"*Nnh~ Feels so good to be back... Did you miss me?*")
             except Exception as e:
     print(f"Ara~ I tried to moan into LOG_CHANNEL, but something naughty got in the way... Error: {e}")
 
