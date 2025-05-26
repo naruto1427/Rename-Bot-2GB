@@ -56,25 +56,34 @@ async def query_metadata(bot: Client, query: CallbackQuery):
 )
 
     elif data == 'cutom_metadata':
-        await query.message.delete()
-        try:
-            try:
-                metadata = await bot.ask(text=Txt.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True, reply_to_message_id=query.message.id)
-            except ListenerTimeout:
-                await query.message.reply_text(
-    "⚠️ Oopsie! Looks like your request took a little nap and timed out... 😴\n\n**Try waking me up again with /metadata!**",
-    reply_to_message_id=query.message.id
-)
-                return
-            print(metadata.text)
-            ms = await query.message.reply_text("**⏳ Hold on, sweetheart... I’m getting things ready for you~**", reply_to_message_id=metadata.id)
-            await jishubotz.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
-            try:
-                await ms.edit("**Yay~ Your Metadata Code is set! You’re amazing! ✅**")
-except Exception as e:
-    print(f"Oopsie daisy! Something went sideways while setting metadata: {e}")
+    await query.message.delete()
+    try:
+        # Ask the cutie for their secret metadata
+        metadata = await bot.ask(
+            text="**Hey sweetie, send me your secret metadata code now~**",
+            chat_id=query.from_user.id,
+            filters=filters.text,
+            timeout=30,
+            disable_web_page_preview=True,
+            reply_to_message_id=query.message.id
+        )
+    except ListenerTimeout:
+        await query.message.reply_text(
+            "**Oops! You took too long to charm me... Try `/metadata` again!**",
+            reply_to_message_id=query.message.id
+        )
+        return
 
-
+    try:
+        print(metadata.text)
+        ms = await query.message.reply_text(
+            "**Mmm... Let me wrap this up for you, gorgeous~**",
+            reply_to_message_id=metadata.id
+        )
+        await jishubotz.set_metadata_code(query.from_user.id, metadata_code=metadata.text)
+        await ms.edit("**Yay~ Your Metadata Code is set, darling! You never fail to impress me! ✅**")
+    except Exception as e:
+        print(f"Oopsie daisy! Something went sideways while setting metadata: {e}")
 
 
 # Jishu Developer 
