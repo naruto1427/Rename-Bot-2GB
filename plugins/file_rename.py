@@ -92,7 +92,7 @@ async def doc(bot, update):
     file = update.message.reply_to_message
 
     try:
-        if update.message.text != "🚀 Mmm~ Let’s get that download started, darling... ⚡"":
+        if update.message.text != "🚀 Mmm~ Let’s get that download started, darling... ⚡":
             ms = await update.message.edit("🚀 Mmm~ Let’s get that download started, darling... ⚡")
     except Exception as e:
         print(f"Error editing message: {e}")
@@ -168,7 +168,7 @@ async def doc(bot, update):
                 thumb=ph_path, 
                 caption=caption, 
                 progress=progress_for_pyrogram,
-                progress_args=("💠 Nn~ Uploading for you, master... So fast it’s making me blush~ ⚡, ms, time.time())
+                progress_args=("💠 Nn~ Uploading for you, master... So fast it’s making me blush~ ⚡", ms, time.time())
             )
         elif type == "video": 
             sent_message = await bot.send_video(
