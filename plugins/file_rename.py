@@ -20,7 +20,7 @@ async def rename_start(client, message):
     ban_chk = await jishubotz.is_banned(int(message.from_user.id))
     if ban_chk:
         return await message.reply(
-            **ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ꜰʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ @Suh0_Kang ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ!**"
+            "**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ꜰʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ @Suh0_Kang ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜɪs ɪssᴜᴇ!**"
         )
     if file.file_size > 2000 * 1024 * 1024:
         return await message.reply_text("Oops~ That file’s too big to handle right now… Maybe try a smaller one? I wanna play with something more manageable~")
