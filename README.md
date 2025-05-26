@@ -72,7 +72,9 @@ status - Check bot status [FOR ADMINS USE ONLY].
 
 ### 💠 CREDIT — *"Power is best shared with those worthy."*
 
-- Crafted with flair by [JishuDeveloper](https://github.com/JishuDeveloper)
+- Crafted with flair by [Naruto](https://github.com/naruto1427)
+- 
+-Crafted with flair by [JishuDeveloper](https://github.com/JishuDeveloper)
 
 ---
 
