@@ -42,7 +42,7 @@ class Bot(Client):
             try: 
                 await self.send_message(id, f"**Mmm~ {me.first_name} is up and dripping with anticipation... Ready to make things messy, darling~?**")                                
             except Exception as e:
-                print(f"Oho~ I tried to moan into admin {id}’s ear, but something got in the way... Kinky error: {e})
+                print(f"Oho~ I tried to moan into admin {id}’s ear, but something got in the way... Kinky error:" {e})
         
         if Config.LOG_CHANNEL:
             try:
