@@ -21,9 +21,9 @@ async def get_stats(bot, message):
 
 @Client.on_message(filters.command("restart") & filters.user(Config.ADMIN))
 async def restart_bot(bot, message):
-    msg = await bot.send_message(text="🔄 Processes Stoped. Bot Is Restarting...", chat_id=message.chat.id)       
+    msg = await bot.send_message(text="🔄 Ooopsie! Processes took a little nap. Restarting the bot now, hang tight!", chat_id=message.chat.id)       
     await asyncio.sleep(3)
-    await msg.edit("✅️ Bot Is Restarted. Now You Can Use Me")
+    await msg.edit("✅️ Yay! I’m all rebooted and ready. You can start using me now!")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 @Client.on_message(filters.private & filters.command("ping"))
