@@ -10,7 +10,7 @@ class Config(object):
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","rename")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_URL  = os.environ.get("DB_URL","-1002585613766")
 
     # other configs
     BOT_UPTIME  = time.time()
